@@ -130,10 +130,15 @@
 <meta property="og:site_name" content="lynssen&#39;s blog">
 <meta property="og:description" content="缘起在有了写博客的想法后，受@Flynnon同学博客的启发，查了下Hexo的文档，发现这款高大上的博客框架。对于Hexo，看一下官方简介：  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-08T09:03:16.732Z">
+<meta property="og:image" content="https://lynssen.com/images/WechatIMG2197.png">
+<meta property="og:image" content="https://lynssen.com/images/WechatIMG2191.png">
+<meta property="og:image" content="https://lynssen.com/images/tags111.png">
+<meta property="og:image" content="https://lynssen.com/images/tags222.png">
+<meta property="og:updated_time" content="2019-04-08T10:32:48.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo路程">
 <meta name="twitter:description" content="缘起在有了写博客的想法后，受@Flynnon同学博客的启发，查了下Hexo的文档，发现这款高大上的博客框架。对于Hexo，看一下官方简介：  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
+<meta name="twitter:image" content="https://lynssen.com/images/WechatIMG2197.png">
 
 
 
@@ -485,7 +490,10 @@
 <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h1><p>!@!#@!#!$@#$@#%…<br>此处省略一万字，参考的网上教程，所以没什么好说的<br>参考的资料：</p>
+<h1 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h1><blockquote>
+<p>!@!#@!#!$@#$@#%…</p>
+</blockquote>
+<p>此处省略一万字，参考的网上教程，所以没什么好说的<br>参考的资料：</p>
 <ul>
 <li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档中文</a></li>
 <li><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029" target="_blank" rel="noopener">hexo史上最全搭建教程</a></li>
@@ -495,7 +503,37 @@
 <li><a href="http://litten.me/" target="_blank" rel="noopener">Litten’s blog</a></li>
 </ul>
 <h1 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h1><p>俗话说，有路就有坑，嗯，踩的脑门疼。<br>很多东西看着很简单，感觉很简单，别人做也没事，可到自己这里就出问题了，很折腾。</p>
-<h2 id="tag-cloud-标签云"><a href="#tag-cloud-标签云" class="headerlink" title="tag cloud 标签云"></a>tag cloud 标签云</h2><p>必须得先说这个！<br>头疼我好几天，刚开始随便写了两篇博文，添加了标签，也有了标签云。</p>
+<ul>
+<li><h4 id="tag-cloud-标签云"><a href="#tag-cloud-标签云" class="headerlink" title="tag cloud 标签云"></a>tag cloud 标签云</h4>必须得先说这个！<br>头疼我好几天，刚开始随便写了两篇博文，添加了标签，也有了标签云。可显示的样式是这样的：<br><img src="/images/WechatIMG2197.png"><br>emmm… 是不是也没觉得有什么问题<br>其实确实没问题，可我有点强迫症，我想要这样子的：<br><img src="/images/WechatIMG2191.png"><br>区别就是样式，我一直以为是需要特定的样式来控制的，就查阿查…<br>然后发现网上的标签云一律都是3D环绕五花八门的<br>看起来很高大上，可不是我想要的阿，简约美观而不单调的阿</li>
+</ul>
+<p>再查…<br>发现可能是这里控制的，min/max不就是嘛<br><img src="/images/tags111.png"><br>然后flag设为true，运行：</p>
+<blockquote>
+<p>失败</p>
+</blockquote>
+<p>再查…<br>发现可能是在lyaout样式里面控制的：<br><img src="/images/tags222.png"><br>嗯，很像，加上语句，运行：</p>
+<blockquote>
+<p>失败</p>
+</blockquote>
+<p>厚着脸皮地说一句，这个问题我查了有了两三天，头疼欲裂阿….<br>其实顶多算是个样式上的小问题，并不影响使用，可我…唉，强迫症晚期<br>再查…<br>然后今天实在是觉得无望了，就去求教大佬flynnon，大佬去翻了下，然后说写的太早了，都忘了。但是，大佬不愧是大佬，一句话就让我醍醐灌顶：</p>
+<blockquote>
+<p><strong>可能是跟文章个数有关？</strong></p>
+</blockquote>
+<p>有可能！<br>但因为临时手里有事，并没有立即去试，不过后来去试了下，又写了一篇博文，标签使用之前已经存在的，比如[学习]，运行：</p>
+<blockquote>
+<p><strong>成功了！</strong></p>
+</blockquote>
+<p>瞬间泪奔！<br>想了下原因，发现其实并不是和文章个数有关，而是标签重复数，之前我标签也不少，可是并没有重复的，所以导致样式都一致。<br>而后来又添加了篇文章，使用到之前的标签，这个标签样式就变了，也就是根据<strong>标签重复数</strong>来随机设定样式的。<br>好吧，不解释了，还是我太蠢了，大佬们都不会为这小问题所绊的，所以网上没有找到类似的问题。</p>
+<ul>
+<li><h4 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h4>这里倒是没有什么坑，主要就是找个自己喜欢的而又没人注册的域名购买就成，也不贵，.com的域名最广泛，大概55/年，其他的要便宜些。<br>我是在阿里<strong><a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a></strong>购买的域名，<strong><a href="https://lynssen.com">lynssen.com</a></strong>，虽然并不是很如我意，但也还可以接受。</li>
+</ul>
+<p>其实一直都想有个自己的英文名，但一直也没有想到合适而喜欢的。<br>趁着这次要购置域名，便又花了些心思和时间去解决这个历史遗留问题，最开始是想用linsen的，也是最初的一个比较喜欢的名字，没什么特别的寓意，倒过来是森林，而linsen也比较顺口，可是，已经被人注册了，无奈，心酸。<br>再然后就想换其他的，比如macon, lynn，但是还是都被注册了，好苦恼。</p>
+<p>后来在知乎看到有推荐一个英文名网站，看了看还不错，可以给想起英文名的小伙伴一个参考：</p>
+<ul>
+<li><a href="https://www.babble.com/baby-names/" target="_blank" rel="noopener">babble.com</a><br>ha，其实就是个给宝宝起名的国外网站，不过国外人起的英文名字总好过我们随便想的吧，至少不会不伦不类。<blockquote>
+<p>ps: 想起之前看过一篇文章，说是在国外人眼里我们中国人哪些英文名听起来觉得匪夷所思？答：撒旦，god一类的，因为这就像是我们中文名叫王母娘娘，玉皇大帝一样，哈哈哈哈，确实言之有理，笑死。</p>
+</blockquote>
+</li>
+</ul>
 
       
     </div>
@@ -745,7 +783,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#缘起"><span class="nav-number">1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建过程"><span class="nav-number">2.</span> <span class="nav-text">搭建过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题选择"><span class="nav-number">3.</span> <span class="nav-text">主题选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#踩坑"><span class="nav-number">4.</span> <span class="nav-text">踩坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tag-cloud-标签云"><span class="nav-number">4.1.</span> <span class="nav-text">tag cloud 标签云</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#缘起"><span class="nav-number">1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建过程"><span class="nav-number">2.</span> <span class="nav-text">搭建过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题选择"><span class="nav-number">3.</span> <span class="nav-text">主题选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#踩坑"><span class="nav-number">4.</span> <span class="nav-text">踩坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#tag-cloud-标签云"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">tag cloud 标签云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#域名"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">域名</span></a></li></ol></li></ol></div>
             
 
           </div>
